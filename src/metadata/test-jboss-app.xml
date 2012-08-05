@@ -1,0 +1,13 @@
+<application>
+  <display-name>TestRemote</display-name>
+  <description>Test Remote Application on JBoss Server</description>
+  <module>
+    <web>
+      <web-uri>bsf-remote-server.war</web-uri>
+      <context-root>remoting</context-root>
+    </web>
+  </module>
+  <module>
+    <ejb>test-jboss-remote.jar</ejb>
+  </module>
+</application>

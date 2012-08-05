@@ -1,0 +1,61 @@
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+
+<web-app>
+
+
+    <!-- General description of your web application -->
+
+    <display-name>Session Http</display-name>
+    <description>
+        This servlet is used to handle EJB like calls from a java client.
+    </description>
+
+
+    <context-param>
+      <param-name>ejbContextProperties</param-name>
+      <param-value></param-value>
+      <description>
+      The properties file used to create the initial context on which
+      the look up will be done.
+      </description>
+    </context-param>
+
+    <context-param>
+      <param-name>principalManagerClassName</param-name>
+      <param-value>org.bsf.remoting.util.impl.JBossPrincipalManager</param-value>
+      <description>
+      The PrincipalManager used.
+      </description>
+    </context-param>
+
+
+
+    <servlet>
+      <servlet-name>httpSession</servlet-name>
+      <description>
+      </description>
+      <servlet-class>org.bsf.remoting.http.HttpSessionServer</servlet-class>
+
+      <!-- Load this servlet at server startup time -->
+      <load-on-startup>5</load-on-startup>
+    </servlet>
+
+
+    <servlet-mapping>
+      <servlet-name>httpSession</servlet-name>
+      <url-pattern>/httpSession</url-pattern>
+    <!--
+      <url-pattern>*.do</url-pattern>
+      -->
+    </servlet-mapping>
+
+
+    <session-config>
+      <session-timeout>600</session-timeout>    <!-- 10 hours-->
+    </session-config>
+
+
+</web-app>

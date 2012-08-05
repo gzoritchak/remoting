@@ -1,0 +1,6 @@
+org.bsf.remoting
+org.bsf.remoting.http
+org.bsf.remoting.rmi
+org.bsf.remoting.util
+org.bsf.remoting.util.impl
+org.bsf.remoting.util.naming

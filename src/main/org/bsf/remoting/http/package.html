@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<!--
+
+  @(#)package.html	1.60 98/01/27
+
+  Copyright 1998 Sun Microsystems, Inc. 901 San Antonio Road,
+  Palo Alto, California, 94303, U.S.A.  All Rights Reserved.
+
+  This software is the confidential and proprietary information of Sun
+  Microsystems, Inc. ("Confidential Information").  You shall not
+  disclose such Confidential Information and shall use it only in
+  accordance with the terms of the license agreement you entered into
+  with Sun.
+
+  CopyrightVersion 1.2
+
+-->
+</head>
+<body bgcolor="white">
+Allows a client to communicate with the server using http calls.
+<p>
+The client asks for a service using the HttpServiceFactory. He gets a reference
+on a service which is in reality a dynamic proxy (@see java.lang.reflect.Proxy).
+This Proxy dispatches all the method invocation to the Service which implements
+the InvocationHandler interface. The Service then delegates the invocation to the
+HttpSessionClient singleton. This class is responsible for the communication with
+the server. It encapsulates the method invocation in http request using
+HttpServiceRequest instances. On theserver, the servlet HttpSessionServer gets
+the HttpServiceRequest and performs the invocation on the EJB reference
+corresponding to the service.
+
+</body>
+</html>

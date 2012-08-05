@@ -1,0 +1,37 @@
+================
+ Version 2.2.2
+================
+* The releaseThreadLock of the HtppSessionClient is now done in a finally block.
+
+
+================
+ Version 2.2.1
+================
+* New way of instantiating the stateful cache for the JRun bug
+(see the forum on bs-factory.org),
+* Better transmission of RemoteException.
+
+================
+ Version 2.2
+================
+* Support of https: the remoting now allow the user to use https as the communication
+protocol.
+* Documentation added on architecture and use of the component.
+
+================
+ Version 2.1
+================
+* Support of authentication : the remoting now allow the user to authenticate. The
+authentication is based on basic http authentication and therefore is not secured.
+* Modification of the configuration of the HttpServiceFactory. Instead of indicated
+the complete path to the servlet the user has to only set the context used during the
+deployment time.
+
+
+================
+ Version 2.0.1
+================
+* JOnAS 3.3 support added. The build.xml contains tasks for both JBoss 3.2 and
+JOnAS 3.3 servers.
+* The remoting demo server source code has been added.
+
